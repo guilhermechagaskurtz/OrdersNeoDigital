@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Guilherme\\source\\repos\\ProductionOrderAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E933D75A-3357-4AB5-8199-ABE7AC178B77}|ProductionOrderAPI\\ProductionOrderAPI.csproj|c:\\users\\guilherme\\source\\repos\\productionorderapi\\productionorderapi\\controllers\\productioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E933D75A-3357-4AB5-8199-ABE7AC178B77}|ProductionOrderAPI\\ProductionOrderAPI.csproj|solutionrelative:productionorderapi\\controllers\\productioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductionController.cs",
+              "DocumentMoniker": "C:\\Users\\Guilherme\\source\\repos\\ProductionOrderAPI\\ProductionOrderAPI\\Controllers\\ProductionController.cs",
+              "RelativeDocumentMoniker": "ProductionOrderAPI\\Controllers\\ProductionController.cs",
+              "ToolTip": "C:\\Users\\Guilherme\\source\\repos\\ProductionOrderAPI\\ProductionOrderAPI\\Controllers\\ProductionController.cs",
+              "RelativeToolTip": "ProductionOrderAPI\\Controllers\\ProductionController.cs",
+              "ViewState": "AgIAANsAAAAAAAAAAAAUwOsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-05T23:16:32.368Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

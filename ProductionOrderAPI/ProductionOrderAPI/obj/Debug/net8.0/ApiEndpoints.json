@@ -1,0 +1,90 @@
+[
+  {
+    "ContainingType": "ProductionController",
+    "Method": "ClearData",
+    "RelativePath": "api/Production/clear-data",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductionController",
+    "Method": "ImportApontamentos",
+    "RelativePath": "api/Production/import-apontamentos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filePath",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductionController",
+    "Method": "ImportOrders",
+    "RelativePath": "api/Production/import-orders",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filePath",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductionController",
+    "Method": "GetOrderById",
+    "RelativePath": "api/Production/order/{orderId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductionController",
+    "Method": "DeleteOrdersWithHigherOrEqualQuantity",
+    "RelativePath": "api/Production/rule-1-delete-orders",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductionController",
+    "Method": "UpdateOrdersWithLowerQuantity",
+    "RelativePath": "api/Production/rule-2-update-orders",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductionController",
+    "Method": "ListFailedApontamentos",
+    "RelativePath": "api/Production/rule-3-failed-apontamentos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
