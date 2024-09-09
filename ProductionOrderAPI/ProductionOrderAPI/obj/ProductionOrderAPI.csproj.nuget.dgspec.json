@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Guilherme\\source\\repos\\ProductionOrderAPI\\ProductionOrderAPI\\ProductionOrderAPI.csproj": {}
+    "C:\\Users\\Guilherme\\Documents\\GitHub Projects\\OrdersNeoDigital\\ProductionOrderAPI\\ProductionOrderAPI\\ProductionOrderAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Guilherme\\source\\repos\\ProductionOrderAPI\\ProductionOrderAPI\\ProductionOrderAPI.csproj": {
+    "C:\\Users\\Guilherme\\Documents\\GitHub Projects\\OrdersNeoDigital\\ProductionOrderAPI\\ProductionOrderAPI\\ProductionOrderAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Guilherme\\source\\repos\\ProductionOrderAPI\\ProductionOrderAPI\\ProductionOrderAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Guilherme\\Documents\\GitHub Projects\\OrdersNeoDigital\\ProductionOrderAPI\\ProductionOrderAPI\\ProductionOrderAPI.csproj",
         "projectName": "ProductionOrderAPI",
-        "projectPath": "C:\\Users\\Guilherme\\source\\repos\\ProductionOrderAPI\\ProductionOrderAPI\\ProductionOrderAPI.csproj",
+        "projectPath": "C:\\Users\\Guilherme\\Documents\\GitHub Projects\\OrdersNeoDigital\\ProductionOrderAPI\\ProductionOrderAPI\\ProductionOrderAPI.csproj",
         "packagesPath": "C:\\Users\\Guilherme\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Guilherme\\source\\repos\\ProductionOrderAPI\\ProductionOrderAPI\\obj\\",
+        "outputPath": "C:\\Users\\Guilherme\\Documents\\GitHub Projects\\OrdersNeoDigital\\ProductionOrderAPI\\ProductionOrderAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -74,10 +74,10 @@ public class ProductionController : ControllerBase
             DateTime productionDate;
             var dateCellValue = worksheet.Cells[row, 4].Value?.ToString();
 
-            // Se a célula não contiver uma data válida, usamos a data default
+            // Se a célula não contiver uma data válida, usamos uma data default
             if (!DateTime.TryParse(dateCellValue, out productionDate))
             {
-                productionDate = DateTime.MinValue; // Atribui a data default se a célula for nula ou inválida
+                productionDate = DateTime.MinValue;
             }
 
             // Cria um novo apontamento e adiciona à lista de apontamentos
@@ -91,7 +91,7 @@ public class ProductionController : ControllerBase
             apontamentos.Add(apontamento);
             importedApontamentos++; // Incrementa o contador de apontamentos
 
-            // Verifica se o valor da célula de ProductionDateTime não é nulo ou contém a string 'NULL'
+            // Verifica se o valor da célula de ProductionDateTime não é nulo ou contém 'NULL'
         }
 
         return Ok(new { ImportedApontamentos = importedApontamentos });
@@ -125,63 +125,6 @@ public class ProductionController : ControllerBase
 
         return NoContent(); // Retorna um status 204 (No Content)
     }
-
-    /*
-    // Método para processar as regras de negócio
-    [HttpDelete("process-business-rules")]
-    public IActionResult ProcessBusinessRules()
-    {
-        // Regras de negócio:
-        // 1. Deletar ordens com quantidade apontada maior ou igual à quantidade original
-        var ordersToDelete = new List<ProductionOrder>();
-        var ordersToUpdate = new List<ProductionOrder>();
-        var falhaDeApontamentos = new List<string>(); // Lista para armazenar as ordens que não existem no Excel de ordens
-
-
-        foreach (var order in orders.ToList())
-        {
-            // Calcula a soma das quantidades apontadas para a ordem
-            var totalApontado = apontamentos
-                .Where(a => a.OrderNumber == order.OrderNumber && a.OperationNumber == order.OperationNumber)
-                .Sum(a => a.Quantity);
-
-            if (totalApontado >= order.Quantity)
-            {
-                // Deleta ordens com quantidade apontada maior ou igual à original
-                ordersToDelete.Add(order);
-            }
-            else if (totalApontado > 0)
-            {
-                // Atualiza as ordens que têm quantidades apontadas menores que a original
-                order.Quantity = totalApontado;
-                ordersToUpdate.Add(order);
-            }
-        }
-
-        // Remove as ordens que precisam ser deletadas
-        orders.RemoveAll(o => ordersToDelete.Contains(o));
-
-        // Regra de negócio 3: Encontrar apontamentos que não possuem ordens correspondentes
-        foreach (var apontamento in apontamentos)
-        {
-            // Verifica se a ordem correspondente ao apontamento existe
-            var existingOrder = orders.FirstOrDefault(o => o.OrderNumber == apontamento.OrderNumber && o.OperationNumber == apontamento.OperationNumber);
-            if (existingOrder == null)
-            {
-                // Se a ordem não existir, adiciona à lista de falhas de apontamento
-                falhaDeApontamentos.Add($"OrderNumber: {apontamento.OrderNumber}, OperationNumber: {apontamento.OperationNumber}");
-            }
-        }
-
-        // Retorna os resultados das regras de negócio
-        return Ok(new
-        {
-            DeletedOrders = ordersToDelete.Count,
-            UpdatedOrders = ordersToUpdate.Count,
-            FalhaDeApontamentos = falhaDeApontamentos // Lista de ordens que falharam no apontamento
-        });
-    }
-    */
 
     // Endpoint para a Regra de Negócio 1: Deletar ordens com quantidade apontada maior ou igual à original
     [HttpDelete("rule-1-delete-orders")]
@@ -246,30 +189,5 @@ public class ProductionController : ControllerBase
 
         return Ok(new { FalhaDeApontamentos = falhaDeApontamentos });
     }
-    /*[HttpGet("rule-3-failed-apontamentos")]
-    public IActionResult ListFailedApontamentos()
-    {
-        var falhaDeApontamentos = new List<string>();
-
-        // Criamos um HashSet para armazenar combinações únicas de OrderNumber e OperationNumber de orders
-        var orderHashSet = new HashSet<(int OrderNumber, int OperationNumber)>(
-            orders.Select(o => (o.OrderNumber, o.OperationNumber))
-        );
-
-        // Agora iteramos pelos apontamentos e verificamos se há uma ordem correspondente
-        foreach (var apontamento in apontamentos)
-        {
-            var key = (apontamento.OrderNumber, apontamento.OperationNumber);
-
-            // Se a combinação de OrderNumber e OperationNumber não estiver no HashSet, é uma falha
-            if (!orderHashSet.Contains(key))
-            {
-                falhaDeApontamentos.Add($"OrderNumber: {apontamento.OrderNumber}, OperationNumber: {apontamento.OperationNumber}");
-            }
-        }
-
-        // Retornamos a lista de falhas de apontamento
-        return Ok(new { FalhaDeApontamentos = falhaDeApontamentos });
-    }*/
 
 }
